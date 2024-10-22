@@ -1,9 +1,5 @@
-# 🏆 Tournament Bracket Maker 🏆
+# 🏆 Tournament Bracket Maker (with Images) 🏆
  
-[![image](https://user-images.githubusercontent.com/55027279/125179569-f8d4f180-e1b4-11eb-9fe9-04cdadccfeff.png)](https://xdwightsbeetsx.github.io/tournament-bracket/) 
+![image](https://github.com/user-attachments/assets/c9d2172c-0685-49c4-a18a-9b532a28508c)
 
 
-### New Features (in the works) 🛠️
-
-- Exporting (.xlsx) 📈
-- Custom Seeding 🌾
