@@ -77,9 +77,14 @@ class Bracket {
             bEERevertElement.appendChild(bEERevertImgElement);
 
             //      BEE NAME
-            let bEENameElement = document.createElement("div");
-            bEENameElement.className = CLASS_BE_NAME + " " + CLASS_VERDANA_GRAY;
-            bEENameElement.innerText = prettyEntry.Name; 
+            let bEENameElement = document.createElement("img");
+            bEENameElement.className = CLASS_BE_NAME + " " + CLASS_VERDANA_GRAY + " be-img";
+            if (prettyEntry.Name == TBD) {
+                bEENameElement.style.visibility = "hidden";
+            }
+            else {
+                bEENameElement.src = prettyEntry.Name; 
+            }
             bEE.appendChild(bEENameElement);
             
             //      BEE ADVANCE ARROW
@@ -90,6 +95,7 @@ class Bracket {
 
             let bEEAdvancImgElement = document.createElement("img");
             bEEAdvancImgElement.src = IMG_ADVANCE;
+            bEEAdvanceElement.style.visibility = "hidden";
             bEEAdvanceElement.appendChild(bEEAdvancImgElement);
 
             // APPEND ELEMENTS
@@ -213,9 +219,11 @@ class Bracket {
         }
 
         // Set winner
-        let winnerName = thisBracketRow.lastChild.childNodes[1].innerText;
+        let winnerName = thisBracketRow.lastChild.childNodes[1].src;
         matchupWinnerRow.lastChild.id = ID_BE + winnerName;
-        matchupWinnerRow.lastChild.childNodes[1].innerText = winnerName;
+        matchupWinnerRow.lastChild.childNodes[1].src = winnerName;
+        matchupWinnerRow.lastChild.childNodes[1].style.visibility = "visible";
+
         this.showArrowsFor(matchupWinnerRow.lastChild);
         
         // Remove advance/revert arrows from the advanced entry and the matchup loser
@@ -233,7 +241,8 @@ class Bracket {
         let prevMatchupSize = 2**(thisSpacing - 1);
 
         // reset the reverting element to TBD
-        thisBracketRow.lastChild.childNodes[1].innerText = TBD;
+        thisBracketRow.lastChild.childNodes[1].innerText = "";
+        thisBracketRow.lastChild.childNodes[1].style.visibility = "hidden";
         thisBracketRow.lastChild.id = ID_BE + TBD;
         this.hideArrowsFrom(thisBracketRow.lastChild);
 

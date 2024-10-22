@@ -23,7 +23,7 @@ class EntriesList {
 
         // Add name to newEntryElement
         let newEntryElementName = document.createElement("div");
-        newEntryElementName.innerText = entry.Name;
+        newEntryElementName.innerText = entry.Title;
         newEntryElementName.className = CLASS_EL_NAME + " " + CLASS_VERDANA_GRAY;
         newEntryElement.appendChild(newEntryElementName);
 

@@ -16,6 +16,7 @@ const ID_MAKE_BRACKET_BTN = "make-bracket-btn";
 const ID_ADD_ENTRY_BTN = "add-entry-btn";
 
 const ID_E_INPUT = "e-input";
+const ID_E_INPUT_NAME = "e-input-name";
 const ID_E_LIST = "e-list";
 
 const ID_B = "bracket";

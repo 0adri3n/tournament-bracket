@@ -1,30 +1,42 @@
 /*===========================*/
 /*==== Incl Pad & Bord ======*/
 /*===========================*/
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /*===========================*/
 /*====== Formtatting ========*/
 /*===========================*/
 .verdana-gray {
-    font-family: Verdana;
-    color: #8d8d8d;
+    font-family: Verdana, sans-serif;
+    color: #4b3f72; /* Texte gris foncé */
 }
 
 /*===========================*/
 /*======= Background ========*/
 /*===========================*/
+body {
+    background-color: #e7d7f0; /* Fond mauve clair */
+    font-family: Arial, sans-serif; /* Police de fond */
+    color: #333; /* Couleur de texte */
+}
+
 .bg-gray {
-    background-color: #8d8d8d;
+    background-color: #c9b8e0; /* Fond mauve moyen */
 }
+
 .bg-light-gray {
-    background-color: #e5e5e5;
+    background-color: #f0e7ff; /* Couleur de fond gris clair */
 }
+
 .bg-white {
     background-color: white;
 }
+
 .rounded {
     border-radius: 8px;
 }
@@ -35,28 +47,31 @@
 #wrapper-main {
     display: flex;
     flex-direction: column;
-
-    height: 100%;
-    
-    margin: 0;
+    height: 100vh;
     padding: 1%;
 }
+
 #wrapper-header {
     height: 120px;
     line-height: 120px;
-
     font-size: 24pt;
+    color: #ffffff; /* Couleur de texte blanche */
+    background: linear-gradient(135deg, #9b77b7, #6c5f8c); /* Dégradé mauve */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    text-align: center; /* Alignement centré */
 }
+
 #wrapper-content {
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
+    padding: 10px;
 }
+
 #wrapper-footer {
     display: flex;
     flex-shrink: 0;
 }
-
 
 /*===========================*/
 /*======== Headers ==========*/
@@ -67,7 +82,6 @@
     vertical-align: middle;
 }
 
-
 /*===========================*/
 /*========= Content =========*/
 /*===========================*/
@@ -77,15 +91,16 @@
     margin: 10px 0;
 }
 
-
 /*======= Left Pane =========*/
 #content-left-pane {
     width: 15%;
     padding: 10px;
 }
+
 #e-list {
     overflow-wrap: anywhere;
 }
+
 .el-row {
     display: flex;
     flex-direction: row;
@@ -93,10 +108,14 @@
     overflow-wrap: anywhere;
     margin: 10px 0;
 }
+
 .el-name {
-    border-bottom: 2px solid #8d8d8d;
+    border-bottom: 2px solid #a89dc6; /* Ligne de séparation */
     width: -webkit-fill-available;
+    color: #4b3f72; /* Couleur de texte gris foncé */
+    padding: 8px 0; /* Espacement interne */
 }
+
 .el-delete {
     cursor: pointer;
     width: 20px;
@@ -117,34 +136,47 @@
     vertical-align: middle;
     padding: 10px;
 }
+
 #add-entry {
     display: flex;
     flex-direction: row;
     width: 80%;
 }
+
 #e-name {
-    font-family: Verdana;
-    font-size: 10pt;
-    color: #636363;
+    font-family: Verdana, sans-serif;
+    font-size: 14pt;
+    color: #6c5f8c; /* Couleur de texte mauve foncé */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #a89dc6; /* Bordure */
+    border-radius: 4px; /* Coins arrondis */
+    background-color: #ffffff; /* Fond blanc pour l'input */
 }
+
 #add-entry-btn-wrapper {
     width: 100%;
     max-width: 200px;
     margin: 0 10px;
 }
+
 .form-btn {
     height: 100%;
     margin: 0 auto;
-    font-family: Verdana;
-    color: #8d8d8d;
+    font-family: Verdana, sans-serif;
+    color: #ffffff; /* Couleur de texte blanche */
     text-align: center;
-    border: 2px solid #8d8d8d;
-    border-radius: 8px;
+    border: none;
+    border-radius: 4px; /* Coins arrondis */
+    background-color: #9b77b7; /* Couleur de fond mauve */
+    padding: 10px; /* Espacement interne */
+    transition: background-color 0.3s ease; /* Transition au survol */
 }
+
 .form-btn:hover {
     cursor: pointer;
-    background-color: #636363;
+    background-color: #7c5b8d; /* Couleur au survol */
 }
+
 #make-bracket-btn-wrapper {
     width: 20%;
     max-width: 200px;
@@ -157,39 +189,54 @@
     align-content: flex-start;
     padding: 10px;
 }
+
 .be-row {
     display: flex;
     flex-direction: row;
     align-content: space-between;
-    height: 40px;
+    height: 300px;
 }
+
 .be {
     display: flex;
     flex-direction: row;
     align-content: space-between;
-    border-bottom: 2px solid #8d8d8d;
+    border-bottom: 2px solid #a89dc6; /* Couleur de séparation */
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
 }
+
 .be-name {
     width: -webkit-fill-available;
     text-align: center;
+    color: #4b3f72; /* Couleur de texte gris foncé */
 }
+
+.be-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px; /* Coins arrondis pour les images */
+}
+
 .be-btn {
     width: 20px;
     height: 20px;
 }
+
 .be-btn:hover {
     cursor: pointer;
 }
+
 .be-btn:hover > img {
-    background-color: lightgray;
+    background-color: lightgray; /* Couleur de fond au survol */
 }
+
 .be-btn > img {
     width: auto;
     height: 100%;
     border-radius: 10px;
 }
-
 
 /*===========================*/
 /*========= Footer ==========*/
@@ -198,13 +245,18 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: #9b77b7; /* Fond du footer */
+    padding: 10px;
 }
+
 #link-wrapper {
     width: fit-content;
     margin: 0 auto;
     padding: 5px;
     cursor: pointer;
+    color: #ffffff; /* Couleur de texte blanche */
 }
+
 #git-logo {
     height: 20px;
     width: auto;

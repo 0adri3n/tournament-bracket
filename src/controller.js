@@ -17,9 +17,11 @@ function addEntry() {
     }
 
     let entryName = document.getElementById(ID_E_INPUT).value;
+    let entryTitle = document.getElementById(ID_E_INPUT_NAME).value;
+    
     if (isValidEntry(entryName)){
         // Add entry to Entries object
-        _E_List.addEntry(new Entry(entryName));
+        _E_List.addEntry(new Entry(entryName, entryTitle));
         
         // Reset the input field
         document.getElementById(ID_E_INPUT).value = "";
